@@ -1,75 +1,67 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(/public/download.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-container {
+  margin-bottom: 20px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body{
-  background-image: url("C:\BrightsCode\Module9\React\pokedex-starting-point\public\download.jpg");
-  background-size: cover;
-  /* background-repeat: no-repeat; */
-}
-
-
-h1{
+h1 {
   text-align: center;
   color: black;
-  text-shadow:
-  -1.5px 0px 0px white,
-  1.5px 0px 0px white,
-  0px -1.5px 0px #ffffff,
-  0px 1.5px 0px #fefefe;
+  text-shadow: -1.5px 0px 0px white, 1.5px 0px 0px white, 0px -1.5px 0px #ffffff, 0px 1.5px 0px #fefefe;
   max-width: 830px;
-  margin: 20px auto 0px auto;
+  width: 100%;
+  margin: 0px auto;
   padding: 10px;
-  background-color: #E5111F;
+  background-color: #e5111f;
+  position: relative;
+  z-index: 1;
 }
 
-.userChoice-section{
+.userChoice-section {
   max-width: 850px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
   background-color: white;
+  padding: 10px 0px;
+  position: relative;
+  z-index: 1;
 }
 
-.pokemon{
+
+
+.pokemon {
   max-width: 830px;
-  min-height: 100vh;
+  width: 100%;
+  height: calc(100% - 60px); /* Adjust the value based on the desired remaining space */
   margin: 0 auto;
   gap: 50px;
   background-color: white;
@@ -78,17 +70,13 @@ h1{
   justify-content: center;
   align-content: flex-start;
   padding: 10px;
+  overflow-y: auto;
 }
 
-.pokemon-items{
+.pokemon-items {
   border: dotted 1px black;
   margin: 5px;
   width: 150px;
   text-align: center;
   background-color: white;
-}
-
-.content-container{
-  margin-bottom: 20px;
-  height: 100vh;
 }
