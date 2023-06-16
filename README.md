@@ -12,4 +12,4 @@ Functionality:
   - type
 - Sort the pokemons by id or name
 - Filter the pokemons by type
-- Search by name or type
+- Search by name
